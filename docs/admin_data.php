@@ -56,7 +56,7 @@
                             $query = "SELECT `name` FROM `names` ORDER BY $order";
                     }
                     else
-                        $query = "SELECT `name` FROM `names` ORDER BY DESC";
+                        $query = "SELECT `name` FROM `names` ORDER BY `id` DESC";
 
                     $data = mysqli_query($con, $query);
                     $n_total = 0;

@@ -39,7 +39,10 @@
     ?>
     <div class="container-fluid">
         <div class="container h-100">
-            <div class="row container-info d-flex justify-content-end w-100">
+            <div class="row container-info mb-4 d-flex justify-content-between w-100">
+                <div class="row logoArrastre mt-3 w-50">
+                    <img class="col-md-4" src="../imgs/Logo_arrastre_blanco.png" alt="">
+                </div>
                 <a class="w-25 info d-flex align-items-center justify-content-end" href="./info.php">+info</a>
             </div>
             <div class="row container-all h-auto d-flex align-content-center justify-content-center">
