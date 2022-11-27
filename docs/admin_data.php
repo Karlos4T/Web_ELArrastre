@@ -83,7 +83,7 @@
                                         while ($i < count($nums)){
                                             if(str_contains($row['name'], $nums[$i]) == true)
                                             {
-                                                $npersons = $i + 1;
+                                                $npersons += $i + 1;
                                                 break;
                                             }
                                             $i++;
