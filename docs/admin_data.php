@@ -29,7 +29,7 @@
                     <?php
                     include './hostconnect.php';
 
-                    $query = "SELECT `name` FROM `names`";
+                    $query = "SELECT `name` FROM `names` ORDER BY `id` DESC";
                     $data = mysqli_query($con, $query);
                     $n_total = 0;
 
