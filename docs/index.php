@@ -32,10 +32,10 @@
         $ip = $_SERVER['REMOTE_ADDR'];
         $registered = false;
 
-        //while($row = mysqli_fetch_array($data)){
-        //    if ($ip == $row['ip'] && $ip != '::1')
-        //        $registered = true;
-        //}
+        while($row = mysqli_fetch_array($data)){
+            if ($ip == $row['ip'] && $ip != '::1')
+                $registered = true;
+        }
     ?>
     <div class="container-fluid">
         <div class="container h-100">
