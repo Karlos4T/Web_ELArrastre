@@ -56,8 +56,7 @@
                             $query = "SELECT `name` FROM `names` ORDER BY $order";
                     }
                     else
-                        $query = "SELECT `name` FROM `names`";
-
+                        $query = "SELECT `name` FROM `names` ORDER BY DESC";
 
                     $data = mysqli_query($con, $query);
                     $n_total = 0;
@@ -81,7 +80,7 @@
                                         $nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
                                         $i = 0;
                                         while ($i < count($nums)){
-                                            if(str_contains($row['name'], $nums[$i]) == true)
+                                            if(strpos($row['name'], $nums[$i]) != false)
                                             {
                                                 $npersons += $i + 1;
                                                 break;
