@@ -39,11 +39,10 @@
     ?>
     <div class="container-fluid">
         <div class="container h-100">
-            <div class="row container-info d-flex justify-content-end w-100">
-                <a class="w-auto info d-flex align-items-center" href="./info.php">+info <span class="material-symbols-outlined">
-arrow_forward</span></a>
+            <div class="row w-100 container-info d-flex justify-content-end w-100">
+                <a class="w-25 info d-flex align-items-center justify-content-end mt-4" href="./info.php">+info <span class="material-symbols-outlined"> </a>
             </div>
-            <div class="row container-all h-auto d-flex align-content-center justify-content-center">
+            <div class="row w-100 container-all h-auto d-flex align-content-center justify-content-center">
                 <img src="./Echanos-un-capote-contra-el-ELA.png" alt="">
                 <div class="container-text d-flex flex-column align-items-center text-light my-3">
                     <h1><b>Ven a la comida solidaria</b></h1>

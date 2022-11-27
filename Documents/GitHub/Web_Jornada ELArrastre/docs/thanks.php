@@ -26,9 +26,9 @@
 <body>
     <div class="container-fluid">
         <div class="container h-100">
-        <div class="row container-info d-flex justify-content-end w-100">
-                <a class="w-auto info d-flex align-items-center mt-4" href="./info.php">+info <span class="material-symbols-outlined">
-arrow_forward</span></a>
+        <div class="row container-info d-flex justify-content-between w-100">
+            <a class="w-25 rt d-flex align-items-center py-4" href="./index.php"><span class="material-symbols-outlined">arrow_back</span>Volver</a>
+            <a class="w-25 info d-flex align-items-center justify-content-end mt-4" href="./info.php"></a>
             <div class="row h-100 d-flex align-content-center justify-content-center">
                 <img src="./Echanos-un-capote-contra-el-ELA.png" alt="">
                 <div class="container-text d-flex flex-column align-items-center text-light my-3">
