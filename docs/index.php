@@ -47,10 +47,10 @@
             </div>
             <div class="row container-all h-auto d-flex align-content-center justify-content-center">
                 <img src="./Echanos-un-capote-contra-el-ELA.png" alt="">
-                <div class="container-text d-flex flex-column align-items-center text-light my-3">
+                <div class="container-text d-flex flex-column text-center align-items-center text-light my-3">
                     <h1><b>Ven a la comida solidaria</b></h1>
                     <h3>El <b> 3 de diciembre </b> en <b>Villanueva de Bogas</b></h3>
-                    <h2>Con el donativo de <b> 10€</b></h2>
+                    <h2>Con el donativo presencial de <b> 10€</b></h2>
                     <h2>disfrutarás de una comida por parte de la peña ELArrastre</h2>
                 </div>
                 <form action="./send_data.php" method="post" class="d-flex flex-column col-11 col-sm-6 align-items-center">
