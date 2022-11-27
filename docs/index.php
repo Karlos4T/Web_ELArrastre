@@ -12,7 +12,7 @@
         integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
         crossorigin="anonymous"></script>
     
-        <!--CSS-->    
+    <!--CSS-->    
     <link rel="stylesheet" href="../styles/index.css">
     
     <!--ICONS-->
@@ -32,17 +32,17 @@
         $ip = $_SERVER['REMOTE_ADDR'];
         $registered = false;
 
-        while($row = mysqli_fetch_array($data)){
+        /*while($row = mysqli_fetch_array($data)){
             if ($ip == $row['ip'] && $ip != '::1')
                 $registered = true;
-        }
+        }*/
     ?>
     <div class="container-fluid">
         <div class="container h-100">
-            <div class="row w-100 container-info d-flex justify-content-end w-100">
-                <a class="w-25 info d-flex align-items-center justify-content-end mt-4" href="./info.php">+info <span class="material-symbols-outlined"> </a>
+            <div class="row container-info d-flex justify-content-end w-100">
+                <a class="w-25 info d-flex align-items-center justify-content-end" href="./info.php">+info</a>
             </div>
-            <div class="row w-100 container-all h-auto d-flex align-content-center justify-content-center">
+            <div class="row container-all h-auto d-flex align-content-center justify-content-center">
                 <img src="./Echanos-un-capote-contra-el-ELA.png" alt="">
                 <div class="container-text d-flex flex-column align-items-center text-light my-3">
                     <h1><b>Ven a la comida solidaria</b></h1>
