@@ -78,11 +78,16 @@
                                             $npersons++;
                                         else if (strstr($row['name'], " y "))
                                             $npersons++;
-                                        else if ($pos = strpos($row['name'], '+'))
-                                            if ($row['name'][$pos + 1] == ' ')
-                                                $npersons += intval($row['name'][$pos + 2], 10);
-                                            else
-                                                $npersons += intval($row['name'][$pos + 1], 10);
+                                        $nums = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+                                        $i = 0;
+                                        while ($i < count($nums)){
+                                            if(str_contains($row['name'], $nums[$i]) == true)
+                                            {
+                                                $npersons = $i + 1;
+                                                break;
+                                            }
+                                            $i++;
+                                        }
                                         $n_total += $npersons;
                                         echo $npersons;
                                         ?>
