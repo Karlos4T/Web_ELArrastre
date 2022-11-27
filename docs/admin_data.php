@@ -23,7 +23,7 @@
 
 <body>
     <div class="container-fluid">
-        <div class="container">
+        <div class="container d-flex justify-content-center">
             <div class="row w-100 d-flex justify-content-center">
                 <div class="table m-4 col-8">
                     <?php
