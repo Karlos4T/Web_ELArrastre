@@ -26,12 +26,15 @@
     <div class="container-fluid">
         <div class="container text-light">
             <div class="row cont-rt">
-                <a class="w-25 rt d-flex align-items-center py-4" href="./index.php"><span class="material-symbols-outlined">arrow_back</span>Volver</a>
+                <a class="w-25 rt d-flex align-items-center py-1" href="./index.php"><span class="material-symbols-outlined">arrow_back</span>Volver</a>
             </div>
             <div class="container-text text-center">
                 <h2>El <b> 3 de Diciembre de 2022 </b> a partir de la <b> 13:00pm </b>la peña el Arrastre celebrará una gran jornada festiva y solidaria en sus instalaciones y plaza de <b> Villanueva de Bogas</b>, con el objetivo de recaudar fondos para donarlos a la asociación “adELAnte”, a través de la iniciativa de Ángel Téllez “Échanos un capote contra la ELA”. 
                 A cada persona que acuda, a cambio de un solidario <b> donativo de 10€</b>, se le ofrecerá un plato de migas, y bebida a elegir para disfrutar de la jornada.
                 </h2>
+                <div class="logoArrastre mt-3">
+                    <img class="w-100" src="../imgs/Logo_arrastre_blanco.png" alt="">
+                </div>
             </div>
         </div>
     </div>

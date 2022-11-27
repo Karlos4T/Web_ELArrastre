@@ -5,11 +5,15 @@ body{
 }
 
 .cont-rt{
-    height: 20vh;
+    height: 15vh;
 }
 
 .container-text{
-    height: 80vh;
+    height: 85vh;
+}
+
+.container-text img{
+    max-width: 500px;
 }
 
 .rt{

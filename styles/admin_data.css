@@ -4,8 +4,72 @@ body{
     background: linear-gradient(to right, #A83279, #D38312); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ 
 }
 
+.filter{
+    height: 10vh;
+}
+
+.btn-searchers{
+    background: transparent;
+    color: aliceblue;
+    border: 2px solid aliceblue;
+    border-radius: 0 20px 20px 0;
+}
+
+.btn-searchers:hover{
+    background: rgba(204, 204, 204, 0.347);
+    transition: .2s;
+}
+
+.btn-searchers:hover span{
+    transform: scale(105%);
+
+}
+
+.select{
+    background: transparent;
+    color: aliceblue;
+    border-radius: 20px 0 0 20px;
+    border: aliceblue 2px solid;
+    cursor: pointer;
+}
+
+select:focus{
+    outline: none;
+}
+
+.select option{
+    color: gray;
+    background: transparent!important;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.intext{
+    border: 2px solid aliceblue;
+    border-radius: 20px 0 0 20px;
+    height: 100%!important;
+    background: transparent;
+    color: aliceblue;
+}
+
+.intext::placeholder{
+    color: aliceblue;
+}
+
+.intext:focus{
+    outline: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 800,
+  'GRAD' 200,
+  'opsz' 48
+}
+
 .table{
-    height: 70vh;
+    height: 60vh;
     overflow-y: scroll;
     border: 2px solid gainsboro;
     border-radius: 7px;

@@ -25,11 +25,40 @@
     <div class="container-fluid">
         <div class="container d-flex justify-content-center">
             <div class="row w-100 d-flex justify-content-center">
+                <div class="filter w-100 d-flex justify-content-end mt-2">
+                    <form action="./admin_data.php" method="GET" class="d-flex flex-wrap justify-content-end align-items-center">
+                        <div class="search d-flex mx-1">
+                            <input name="intext" type="text" class="intext h-100 py-1 px-3" placeholder="Buscar">
+                            <button type="submit" class="px-2 d-flex align-items-center btn-searchers" value=""><span class="material-symbols-outlined">search</span></button>
+                        </div>
+                        <div class="order d-flex mx-1">
+                            <select class="select px-2 py-1" name="order" id="">
+                                <option value="`id` DESC">Mas reciente</option>
+                                <option value="`id` ASC">Mas antiguo</option>
+                                <option value="`name` ASC">A-Z</option>
+                                <option value="`name` DESC">Z-A</option>
+                            </select>
+                            <button type="submit" class="h-100 p-auto px-2 py-1 d-flex align-items-center btn-searchers" value=""><span class="material-symbols-outlined">sort</span></button>
+                        </div>
+                    </form>
+                </div>
                 <div class="table m-4 col-8">
                     <?php
                     include './hostconnect.php';
 
-                    $query = "SELECT `name` FROM `names` ORDER BY `id` DESC";
+                    if (isset($_GET['intext']) || isset($_GET['order'])){
+                        $order = $_GET['order'];
+                        if (isset($_GET['intext']) && !empty($_GET['intext'])){
+                            $searcher = $_GET['intext'];
+                            $query = "SELECT `name` FROM `names` WHERE `name` LIKE '%$searcher%' ORDER BY $order";
+                        }
+                        else
+                            $query = "SELECT `name` FROM `names` ORDER BY $order";
+                    }
+                    else
+                        $query = "SELECT `name` FROM `names`";
+
+
                     $data = mysqli_query($con, $query);
                     $n_total = 0;
 
