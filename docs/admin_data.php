@@ -26,7 +26,7 @@
         <div class="container d-flex justify-content-center">
             <div class="row w-100 d-flex justify-content-center">
                 <div class="filter w-100 d-flex justify-content-end mt-2">
-                    <form action="./admin_data.php" method="GET" class="d-flex flex-wrap justify-content-end align-items-center">
+                    <form action="./admin_data.php" method="GET" class="d-flex flex-wrap justify-content-between justify-content-md-end align-items-center">
                         <div class="search d-flex mx-1">
                             <input name="intext" type="text" class="intext h-100 py-1 px-3" placeholder="Buscar">
                             <button type="submit" class="px-2 d-flex align-items-center btn-searchers" value=""><span class="material-symbols-outlined">search</span></button>
@@ -38,10 +38,11 @@
                                 <option value="`name` ASC">A-Z</option>
                                 <option value="`name` DESC">Z-A</option>
                             </select>
-                            <button type="submit" class="h-100 p-auto px-2 py-1 d-flex align-items-center btn-searchers" value=""><span class="material-symbols-outlined">sort</span></button>
+                            <button type="submit" class="h-100 p-auto px-2 py-1 d-flex align-items-center btn-searchers" value=""><span class="material-symbols-outlined sort">sort</span></button>
+                        </div>
+                        <a class="btn-reset mx-1 d-flex p-1 align-content-center m-0" href="./admin_data.php"><span  class="material-symbols-outlined">restart_alt</span></a>
                         </div>
                     </form>
-                </div>
                 <div class="table m-4 col-8">
                     <?php
                     include './hostconnect.php';

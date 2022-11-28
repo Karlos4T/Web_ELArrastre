@@ -22,7 +22,21 @@ body{
 
 .btn-searchers:hover span{
     transform: scale(105%);
+}
 
+a{
+    background: transparent;
+    border: 2px solid aliceblue;
+    border-radius: 20px;
+    text-decoration: none;
+    color: aliceblue;
+    transition: .2s;
+}
+
+a:hover{
+    transform: rotate(-90deg);
+    color: aliceblue;
+    background: rgba(204, 204, 204, 0.347);
 }
 
 .select{
@@ -42,6 +56,14 @@ select:focus{
     background: transparent!important;
     border-radius: 20px;
     cursor: pointer;
+}
+.sort{
+    transition: .5s;
+    transform: rotateX(0deg);
+}
+button:hover .sort{
+    transform: rotateX(180deg);
+    transition: .5s;
 }
 
 .intext{
