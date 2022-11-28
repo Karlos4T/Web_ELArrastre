@@ -46,7 +46,6 @@
                 <a class="w-25 info d-flex align-items-center justify-content-end" href="./info.php">+info</a>
             </div>
             <div class="row container-all h-auto d-flex align-content-center justify-content-center">
-                <img src="./Echanos-un-capote-contra-el-ELA.png" alt="">
                 <div class="container-text d-flex flex-column text-center align-items-center text-light my-3">
                     <h1><b>Ven a la comida solidaria</b></h1>
                     <h3>El <b> 3 de diciembre </b> en <b>Villanueva de Bogas</b></h3>

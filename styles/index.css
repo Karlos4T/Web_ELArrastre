@@ -12,11 +12,15 @@ body::-webkit-scrollbar{
     animation: intro 1.2s;
 }
 .container-fluid{
-    height: 100vh;
+    height: 80vh;
 }
  
 .container-info{
     height: 10vh;
+}
+
+img{
+    max-height: 200px;
 }
 
 .container-all{

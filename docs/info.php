@@ -33,7 +33,7 @@
                 A cada persona que acuda, a cambio de un solidario <b> donativo de 10€</b>, se le ofrecerá un plato de migas, y bebida a elegir para disfrutar de la jornada.
                 </h2>
                 <div class="logoArrastre mt-3">
-                    <img class="w-100" src="../imgs/Logo_arrastre_blanco.png" alt="">
+                    <img class="w-50" src="../imgs/Logo_arrastre_blanco.png" alt="">
                 </div>
             </div>
         </div>
