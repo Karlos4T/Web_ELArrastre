@@ -21,6 +21,7 @@ body::-webkit-scrollbar{
 
 img{
     max-height: 200px;
+    animation: intrologo 2s;
 }
 
 .container-all{
@@ -60,5 +61,14 @@ svg{
     }
     to{
         transform: translateY(0px);
+    }
+}
+
+@keyframes intrologo {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
     }
 }
