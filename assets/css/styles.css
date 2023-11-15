@@ -1,0 +1,238 @@
+body{
+    background-color: #fcfcfc;
+    color: #0c0c0c;
+}
+
+#main .register-default{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#main .register-default form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.register-default form .btn-del-input{
+    margin: 1rem;
+}
+
+@keyframes intro {
+    from{
+        transform: translateY(1000px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes intrologo {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+.cont-rt{
+    height: 15vh;
+}
+
+.container-text{
+    animation: introtext 1.2s;
+}
+
+.container-text img{
+    max-width: 500px;
+}
+
+@media (max-width: 600px) {
+    .cont-rt{
+        height: 10vh;
+    }
+}
+
+.rt{
+    text-decoration: none;
+    
+    transform: scale(100%);
+    transition: .2s;
+}
+
+.rt:hover{
+    transform: scale(110%);
+    transition: .2s;
+    
+}
+
+img{
+    animation: introimg 1s;
+}
+
+@keyframes introimg {
+    from{
+        transform: translateY(1000px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+
+@keyframes introtext {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+
+
+.filter{
+    height: 10vh;
+}
+
+.btn-searchers{
+    background: transparent;
+    
+    border: 2px solid ;
+    border-radius: 0 20px 20px 0;
+}
+
+.btn-searchers:hover{
+    background: rgba(204, 204, 204, 0.347);
+    transition: .2s;
+}
+
+.btn-searchers:hover span{
+    transform: scale(105%);
+}
+
+a{
+    background: transparent;
+    border: 2px solid ;
+    border-radius: 20px;
+    text-decoration: none;
+    
+    transition: .2s;
+}
+
+a:hover{
+    transform: rotate(-90deg);
+    
+    background: rgba(204, 204, 204, 0.347);
+}
+
+.select{
+    background: transparent;
+    
+    border-radius: 20px 0 0 20px;
+    border:  2px solid;
+    cursor: pointer;
+}
+
+select:focus{
+    outline: none;
+}
+
+.select option{
+    color: gray;
+    background: transparent!important;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.sort{
+    transition: .5s;
+    transform: rotateX(0deg);
+}
+button:hover .sort{
+    transform: rotateX(180deg);
+    transition: .5s;
+}
+
+.intext{
+    border: 2px solid ;
+    border-radius: 20px 0 0 20px;
+    height: 100%!important;
+    background: transparent;
+}
+
+.intext:focus{
+    outline: none;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 800,
+  'GRAD' 200,
+  'opsz' 48
+}
+
+.table{
+    height: 60vh;
+    overflow-y: scroll;
+    border: 2px solid gainsboro;
+    border-radius: 7px;
+}
+
+.table::-webkit-scrollbar{
+    width: 7px;
+    background: rgba(249, 249, 249, 0.466);
+    border-radius: 50vw;
+}
+
+.table::-webkit-scrollbar-thumb{
+    background-color: rgb(240, 240, 240);
+    border-radius: 50vw;
+}
+
+.row_table{
+    border-bottom: solid 1px ;
+
+}
+
+.cont-name{
+    width: auto;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+
+
+.info{
+    text-decoration: none;
+    
+    font-size: 1.1rem;
+    transform: scale(100%);
+    transition: .2s;
+}
+
+.info:hover{
+    transform: scale(110%);
+    transition: .2s;
+    
+}
+
+.rt{
+    text-decoration: none;
+    
+    transform: scale(100%);
+    transition: .2s;
+}
+
+.rt:hover{
+    transform: scale(110%);
+    transition: .2s;
+    
+}
+
+img{
+    max-width: 500px!important;
+}
