@@ -2,6 +2,7 @@
     include "./hostconnect.php";
     if ($_SERVER["REQUEST_METHOD"] == "POST") 
     {
+        $con = hostConnect();
         if ($con){
             foreach ($_POST as $key => $name)
             {
@@ -10,7 +11,7 @@
                     $query = "INSERT INTO `names` (`name`, `ip`) VALUES ('$name', '')";
                     $res = mysqli_query($con, $query);
                     if ($res)
-                        header("Location: ../index.php");
+                        header("Location: ../front/");
                     else
                         echo ("Error al registrar");
                 }

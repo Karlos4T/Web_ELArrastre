@@ -12,7 +12,7 @@
                     <div class="container-text d-flex flex-column text-center align-items-center my-3">
                         <h2>Texto de relleno</h2>
                     </div>
-                    <form id="registerForm" action="./logic/send_data.php" method="post" class="w-100">
+                    <form id="registerForm" action="../back/send_data.php" method="post" class="w-100">
                         <div id="inputsContainer" class="container">
                             <div id="inputDiv0" class="d-flex">
                                 <input onkeyup="active_desactive_btn()" id="inpt" minlength="5" maxlength="50" name="name" type="text" placeholder="Pon tu nombre y apellidos" class="my-3 p-2 w-100">
@@ -43,7 +43,9 @@
             <!--Sección para apuntar todo los numeros del año pasado-->
         </div>
         <div>
-            <!--Sección marcas que colaboran-->
+            <?php
+                include "./collaborators.php";
+            ?>
         </div>
         <div>
             <!--Sección colaboración extraordinaria-->

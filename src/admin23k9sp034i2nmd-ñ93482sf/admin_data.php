@@ -2,7 +2,6 @@
 <html lang="en">
 <?php
     include "../includes/head.php";
-    include "../back/functions.php";
     if (!isset($_SESSION['rol']))
         header("Location: ./index.php");
 ?>
@@ -27,45 +26,48 @@
                     <a class="btn-reset mx-1 d-flex p-1 align-content-center m-0" href="./admin_data.php"><span  class="material-symbols-outlined">restart_alt</span></a>
                 </form>
             </div>
-            <div class="table m-4 col-8">
-                <?php
-                include '../back/hostconnect.php';
+            <div class="col-12 col-md-6">
+                <div class="row w-100 text-center my-3">
+                    <h3 >¡Se han apuntado <b> <?php echo get_n_users($con);?></b> personas!</h3>
+                </div>
+                <div class="table">
 
-                if (isset($_GET['intext']) || isset($_GET['order'])){
-                    $order = $_GET['order'];
-                    if (isset($_GET['intext']) && !empty($_GET['intext'])){
-                        $searcher = $_GET['intext'];
-                        $query = "SELECT `name` FROM `names` WHERE `name` LIKE '%$searcher%' ORDER BY $order";
+                    <?php
+                    if (isset($_GET['intext']) || isset($_GET['order'])){
+                        $order = $_GET['order'];
+                        if (isset($_GET['intext']) && !empty($_GET['intext'])){
+                            $searcher = $_GET['intext'];
+                            $query = "SELECT `name` FROM `names` WHERE `name` LIKE '%$searcher%' ORDER BY $order";
+                        }
+                        else
+                        $query = "SELECT `name` FROM `names` ORDER BY $order";
                     }
                     else
-                        $query = "SELECT `name` FROM `names` ORDER BY $order";
-                }
-                else
                     $query = "SELECT `name` FROM `names` ORDER BY `id` DESC";
-
-                $data = mysqli_query($con, $query);
-                if ($data) {
-                    while ($row = mysqli_fetch_array($data)) {
-                ?>
-                <div class="row_table d-flex justify-content-between m-0 px-3">
-                    <div class="cont-name">
-                        <h6 class="m-0 d-flex h-100 name align-items-center"><?php echo $row['name']; ?></h6>
+                    
+                    $data = mysqli_query($con, $query);
+                    if ($data) {
+                        while ($row = mysqli_fetch_array($data)) {
+                            ?>
+                    <div class="row_table d-flex justify-content-between m-0 px-3">
+                        <div class="cont-name">
+                            <h6 class="m-0 d-flex h-100 name align-items-center"><?php echo $row['name']; ?></h6>
+                        </div>
                     </div>
-                </div>
-                <?php
-                    }
-                } else 
+                    <?php
+                        }
+                    } else 
                     echo 'error';
-                ?>
+                    ?>
+                </div>
             </div>
-            <div class="row w-100 text-center mt-3">
-                <h1 >¡Se han apuntado <b> <?php echo get_n_users();?></b> personas!</h1>
+            <div class="col-12 col-md-6">
+                <?php
+                    include "./add_collaborators.php";
+                ?>
             </div>
         </div>
     </div>
-    <?php
-        include "./add_collaborators.php";
-    ?>
 </body>
 
 </html>

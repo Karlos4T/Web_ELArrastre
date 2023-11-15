@@ -25,21 +25,21 @@
 <body>
 
 <div class="container formulario">
-    <h2>Añadir Imagen y Texto</h2>
-    <form>
+    <h3 class="text-center my-3">+ Añadir Colaborador</h3>
+    <form method="post" action="../back/post_collaborators.php" enctype="multipart/form-data">
         <div class="form-group">
-            <label for="texto">Texto:</label>
-            <input class="form-control" id="texto" rows="4" placeholder="Escribe tu texto aquí"></input>
+            <label for="texto">Nombre:</label>
+            <input class="form-control" id="texto" rows="4" name="name" placeholder="Nombre o entidad"></input>
         </div>
+        <div class="preview-imagen"></div>
         <div class="form-group">
             <label for="imagen">Imagen:</label>
-            <input type="file" class="form-control-file" id="imagen">
+            <input type="file" class="form-control-file" name="img" accept="image/*" id="imagen">
             <small id="imagenHelp" class="form-text text-muted">Selecciona una imagen para añadir.</small>
         </div>
         <button type="submit" class="btn btn-primary">Añadir</button>
     </form>
-    <div class="preview-imagen">
-    </div>
+
 </div>
 
 <!-- Agrega los scripts de Bootstrap y jQuery -->
@@ -49,29 +49,21 @@
 
 <!-- Script para mostrar la vista previa de la imagen seleccionada -->
 <script>
-    // Selecciona el elemento de entrada de imagen
     var inputImagen = document.getElementById('imagen');
-    // Selecciona el elemento de vista previa de la imagen
     var previewImagen = document.querySelector('.preview-imagen');
 
-    // Añade un evento de cambio al input de imagen
     inputImagen.addEventListener('change', function() {
-        // Verifica si se seleccionó una imagen
         if (inputImagen.files && inputImagen.files[0]) {
             var reader = new FileReader();
 
-            // Lee la imagen como una URL de datos
             reader.onload = function(e) {
-                // Crea un elemento de imagen y establece su fuente como la URL de datos
                 var imagen = document.createElement('img');
                 imagen.src = e.target.result;
 
-                // Añade la imagen a la vista previa
                 previewImagen.innerHTML = '';
                 previewImagen.appendChild(imagen);
             };
 
-            // Lee la imagen como una URL de datos
             reader.readAsDataURL(inputImagen.files[0]);
         }
     });

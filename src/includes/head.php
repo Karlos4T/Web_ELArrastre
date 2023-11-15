@@ -1,5 +1,5 @@
 <?php
-    session_start();
+    include '../back/includes.php';
 ?>
 <head>
     <meta charset="UTF-8">
