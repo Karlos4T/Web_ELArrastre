@@ -23,11 +23,11 @@ generarInput = (e) => {
     nuevoDiv.className = "d-flex";
 
     nuevoInput.type = "text";
-    nuevoInput.placeholder = "Pon el nombre y apellidos de tu acompañante";
-    nuevoInput.className = "my-3 p-2 w-100";
+    nuevoInput.placeholder = "Nombre y apellidos de tu acompañante";
+    nuevoInput.className = "form-control my-3 p-2 w-100";
     nuevoInput.name = "name" + contadorInputs;
     
-    nuevoDelBtn.className = "btn btn-danger btn-del-input";
+    nuevoDelBtn.className = "btn-del-input";
     nuevoDelBtn.id = contadorInputs;
     nuevoDelBtn.addEventListener("click", function(e){
         e.preventDefault()
