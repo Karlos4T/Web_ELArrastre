@@ -11,7 +11,7 @@
                     $query = "INSERT INTO `names` (`name`, `ip`) VALUES ('$name', '')";
                     $res = mysqli_query($con, $query);
                     if ($res)
-                        header("Location: ../front/");
+                        header("Location: ../front/?msg");
                     else
                         echo ("Error al registrar");
                 }

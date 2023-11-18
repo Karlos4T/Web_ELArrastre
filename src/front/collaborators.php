@@ -3,7 +3,7 @@
 
     $arr = get_collaborators($con);
     ?>
-    <h2 class="m-3 text-center"><b>Entidades que colaboran</b></h2>
+    <h2 class="m-3 text-center t-blue impact"><b>ENTIDADES QUE COLABORAN</b></h2>
     <div class="collaborators p-5 d-flex flex-wrap">
     <?php
         while ($row = mysqli_fetch_array($arr))
@@ -15,7 +15,7 @@
                     {
                         ?>
                         <div class="m-2 card_colab p-3">
-                            <p class="name_collab text-center mt-3 h3"><?php echo $row['name'];?></p>
+                            <p class="name_collab text-center mt-3 h3 t-blue"><?php echo $row['name'];?></p>
                         </div>  
                         <?php
                     }
@@ -32,7 +32,7 @@
                         ?>
                         <div class="m-2 card_colab p-3">
                             <img class="logo_collab w-100" src="<?php echo('../../assets/imgs/collaborators/'.$row['path_img']);?>" alt="">
-                            <p class="name_collab text-center mt-3"><?php echo $row['name'];?></p>
+                            <p class="name_collab text-center mt-3 t-blue"><?php echo $row['name'];?></p>
                         </div>   
                         <?php
                     }
