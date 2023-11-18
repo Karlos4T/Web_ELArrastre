@@ -16,7 +16,7 @@
 
 <div class="d-flex flex-column justify-content-center formulario h-100">
     <div class="card bg-light p-4 my-3">
-        <h3 class="text-center my-3">+ Añadir Colaborador</h3>
+        <h3 class="text-center t-blue my-3">+ Añadir Colaborador</h3>
         <form method="post" action="../back/post_collaborators.php" enctype="multipart/form-data">
             <div class="form-group">
                 <label for="texto">Nombre:</label>

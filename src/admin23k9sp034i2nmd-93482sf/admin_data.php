@@ -11,7 +11,7 @@
     ?>
     <div class="container py-4 d-flex justify-content-center">
         <div class="row w-100 d-flex justify-content-center">
-            <div class="row w-100 text-center my-3">
+            <div class="row w-100 text-center t-blue my-3">
                 <h1>¡Se han apuntado <b> <?php echo get_n_users($con);?></b> personas!</h1>
             </div>
             <div class="col-12 col-md-6">
