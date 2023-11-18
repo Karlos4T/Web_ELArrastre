@@ -8,9 +8,9 @@
 
             echo ($_SESSION['rol']);
             if (isset($_SESSION))
-                header("Location: ../admin23k9sp034i2nmd-ñ93482sf/admin_data.php");
+                header("Location: ../admin23k9sp034i2nmd-93482sf/admin_data.php");
         }
         else
-            header("Location: ../admin23k9sp034i2nmd-ñ93482sf/");
+            header("Location: ../admin23k9sp034i2nmd-93482sf/");
     }
 ?>

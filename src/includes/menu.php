@@ -10,7 +10,7 @@ if (isset($_SESSION['rol']))
                 <img class="h-100" src="../../assets/imgs/LogoELArrastre.png" alt="">
             </a>
             <div class="w-25 d-flex justify-content-end px-3">
-                <a class="text-dark" href="../../src/admin23k9sp034i2nmd-ñ93482sf/">
+                <a class="text-dark" href="../../src/admin23k9sp034i2nmd-93482sf/">
                     <b>
                         Panel de administrador
                     </b>

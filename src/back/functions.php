@@ -26,7 +26,7 @@ function post_collaborator($con, $data, $img)
             $query = "INSERT INTO `collaborators`(`name`, `path_img`) VALUES ('$name','$path')";
             $res = mysqli_query($con, $query);
             if ($res)
-                header("Location: ../admin23k9sp034i2nmd-ñ93482sf/");
+                header("Location: ../admin23k9sp034i2nmd-93482sf/");
         } else {
             echo "Error al subir la imagen.";
         }
