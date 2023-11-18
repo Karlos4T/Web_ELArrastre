@@ -23,16 +23,17 @@ function post_collaborator($con, $data, $img)
         $rutaArchivo = $carpetaDestino . $nombreArchivo;
         echo $rutaArchivo;
         if (move_uploaded_file($img["img"]["tmp_name"], $rutaArchivo)) {
-            $query = "INSERT INTO `collaborators`(`name`, `path_img`) VALUES ('$name','$path')";
-            $res = mysqli_query($con, $query);
-            if ($res)
-                header("Location: ../admin23k9sp034i2nmd-93482sf/");
+            echo "imagen subida.";
         } else {
             echo "Error al subir la imagen.";
         }
     } else {
         echo "Por favor, selecciona una imagen.";
     }
+    $query = "INSERT INTO `collaborators`(`name`, `path_img`) VALUES ('$name','$path')";
+    $res = mysqli_query($con, $query);
+    if ($res)
+        header("Location: ../admin23k9sp034i2nmd-93482sf/");
     
 }
 
