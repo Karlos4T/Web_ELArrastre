@@ -1,4 +1,4 @@
-<div class="contact row m-0 d-flex justify-content-center px-md-5 pb-md-5 p-3">
+<div class="contact row m-0 d-flex justify-content-center px-md-5 p-3">
     <h2 class="text-center my-3 impact">¿QUIERES COLABORAR DE MANERA EXTRAORDINARIA?</h2>
     <div class="col-12 col-md-5 d-flex align-items-center">
         <div class="p-lg-5">
@@ -18,13 +18,15 @@
         <h4 class="text-center mb-5">RELLENA EL FORMULARIO Y NOS PONDREMOS EN CONTACTO CONTIGO</h4>
         <input type="hidden" name="collaborator_input" value="1">
         <input required class="form-control my-3" type="text" name="name" placeholder="Nombre de persona o entidad">
+        <input required class="form-control my-3" type="text" name="mail" placeholder="Correo o teléfono de contacto">
+        <textarea required class="form-control my-3" name="message" id="" cols="30" placeholder="¿Cuál es tu propuesta?" rows="5"></textarea>
         <div class="form-group d-flex justify-content-center">
             <input type="file" class="form-control-file d-none" name="img" accept="image/*" id="imagen">
             <label class="btn btn-primary ml-3" for="imagen"><b>+ Añade el logotipo de tu entidad</b></label> <span class="p-2 mx-2"><b>(opcional)</b></span>
         </div>
-        <input class="form-control my-3" type="text" name="link" placeholder="Página web o redes sociales">
-        <input required class="form-control my-3" type="text" name="mail" placeholder="Correo o teléfono de contacto">
-        <textarea required class="form-control my-3" name="message" id="" cols="30" placeholder="¿Cuál es tu propuesta?" rows="5"></textarea>
+        <div class="form-group d-flex justify-content-center">
+            <input class="form-control my-3" type="text" name="link" placeholder="Página web o redes sociales"><span class="p-2 mx-2 my-3"><b>(opcional)</b></span>
+        </div>
         <div class="d-flex justify-content-end">
             <button type="submit" class="btn btn-success">Enviar</button>
         </div>

@@ -12,7 +12,7 @@
                     if (empty($row['path_img']))
                     {
                         ?>
-                        <a <?php if (!empty($row['link'])){?>href="<?php echo $row['link']?>" <?php }?> class="card_colab col-6 col-md-3 p-3">
+                        <a <?php if (!empty($row['link'])){?>href="<?php echo $row['link']?>" <?php }?> class="card_colab col-4 col-md-3 p-3">
                             <p class="name_collab text-center mt-3 h3 t-blue"><b><?php echo $row['name'];?></b></p>
                         </a>  
                         <?php
@@ -28,7 +28,7 @@
                     if (!empty($row['path_img']))
                     {
                         ?>
-                        <a <?php if (!empty($row['link'])){?>href="<?php echo $row['link']?>" <?php }?>target="blank" class="card_colab col-6 col-md-3 p-3 d-flex align-items-between">
+                        <a <?php if (!empty($row['link'])){?>href="<?php echo $row['link']?>" <?php }?>target="blank" class="card_colab col-4 col-md-3 p-3 d-flex align-items-between">
                             <div class="h-100 d-flex align-items-center justify-content-center">
                                 <img class="logo_collab" src="<?php echo('../../assets/imgs/collaborators/'.$row['path_img']);?>" alt="">
                             </div>
