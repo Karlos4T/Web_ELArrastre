@@ -14,6 +14,7 @@ function post_collaborator($con, $data, $img)
     $name = $data["name"];
     $mail = $data["mail"];
     $message = $data["message"];
+    $link = $data["link"];
     $path = $img["img"]["name"];
     if (isset($img["img"]) && $img["img"]["error"] == 0) {
         $carpetaDestino = "../../assets/imgs/collaborators/";
@@ -32,7 +33,7 @@ function post_collaborator($con, $data, $img)
     } else {
         echo "Por favor, selecciona una imagen.";
     }
-    $query = "INSERT INTO `collaborators`(`name`, `path_img`, `mail`, `message`) VALUES ('$name','$path', '$mail', '$message')";
+    $query = "INSERT INTO `collaborators`(`name`, `path_img`, `mail`, `message`, `link`) VALUES ('$name','$path', '$mail', '$message', '$link')";
     $res = mysqli_query($con, $query);
     if ($res)
     {
@@ -52,6 +53,33 @@ function update_link_collaborator($con, $data)
     if ($res)
         header("Location: ../admin23k9sp034i2nmd-93482sf/");
 }
+
+function update_img_collaborator($con, $data, $img)
+{
+    $path = $img["img"]["name"];
+    if (isset($img["img"]) && $img["img"]["error"] == 0) {
+        $carpetaDestino = "../../assets/imgs/collaborators/";
+        if (!file_exists($carpetaDestino)) {
+            if(!mkdir($carpetaDestino, 0777, true))
+                echo("\nError creating dir\n");
+        }
+        $nombreArchivo = basename($img["img"]["name"]);
+        $rutaArchivo = $carpetaDestino . $nombreArchivo;
+        if (move_uploaded_file($img["img"]["tmp_name"], $rutaArchivo)) {
+        {
+            $query = "UPDATE `collaborators` SET `path_img`='$path' WHERE `id` = '{$data['id']}'";
+            $res = mysqli_query($con, $query);
+            if ($res)
+                header("Location: ../admin23k9sp034i2nmd-93482sf/");
+        }
+        } else {
+            echo "Error al subir la imagen.";
+        }
+    } else {
+        echo "Por favor, selecciona una imagen.";
+    }
+}
+
 
 function get_collaborators($con)
 {

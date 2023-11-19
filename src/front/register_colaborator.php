@@ -3,7 +3,7 @@
     <div class="col-12 col-md-5 d-flex align-items-center">
         <div class="p-lg-5">
             <p class="h5 text-center">
-                Envíanos un correo a <u><b>jalvas65@gmail.com</b></u> o contáctanos al número de teléfono <u><b>+34 616519625</b></u> y dinos de qué manera quieres ayudar.
+                Envíanos un correo a <b>jalvas65@gmail.com</b> o contáctanos al número de teléfono <b>+34 616519625</b> y dinos de qué manera quieres ayudar.
                 Ya sea donación económica para la causa, aporte de comida, aporte de material o simplemente colaboración,
                 toda ayuda será bien recibida.
             </p>
@@ -22,6 +22,7 @@
             <input type="file" class="form-control-file d-none" name="img" accept="image/*" id="imagen">
             <label class="btn btn-primary ml-3" for="imagen"><b>+ Añade el logotipo de tu entidad</b></label> <span class="p-2 mx-2"><b>(opcional)</b></span>
         </div>
+        <input class="form-control my-3" type="text" name="link" placeholder="Página web o redes sociales">
         <input required class="form-control my-3" type="text" name="mail" placeholder="Correo o teléfono de contacto">
         <textarea required class="form-control my-3" name="message" id="" cols="30" placeholder="¿Cuál es tu propuesta?" rows="5"></textarea>
         <div class="d-flex justify-content-end">

@@ -36,6 +36,8 @@
                 show_user($con, $_POST);
             elseif (isset($_POST["update-link"]))
                 update_link_collaborator($con, $_POST);
+            elseif (isset($_POST["update-img"]))
+                update_img_collaborator($con, $_POST, $_FILES);
             else 
                 echo "Error al procesar la solicitud";
         }
