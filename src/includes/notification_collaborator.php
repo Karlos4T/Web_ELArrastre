@@ -11,6 +11,7 @@
       padding: 15px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
       animation: slideIn 0.5s ease-out forwards;
+      border-radius: 0% 100% 37% 63% / 68% 0% 100% 32%;
     }
 
     @keyframes slideIn {
@@ -35,7 +36,7 @@
 
 <div id="notification">
   <strong>Peña el arrastre</strong><br>
-  muchas gracias por contribuir con la causa 🫶
+    <p class="p-2 px-5">Muchas gracias, pronto nos pondremos en contacto contigo</p>
 </div>
 
 <script>

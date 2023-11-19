@@ -1,10 +1,10 @@
 <?php
 function hostConnect()
 {
-    $host = "localhost";
-    $user = "u463589001_user4t";
-    $key = "8@Bcv*CSv|V";
-    $db = "u463589001_elarrastre";
+    $host = constant("DB_LOCAL_HOST");
+    $user = constant("DB_LOCAL_USER");
+    $key = constant("DB_LOCAL_PASSWORD");
+    $db = constant("DB_LOCAL_DB");
     
     $con = mysqli_connect($host, $user, $key, $db);
     

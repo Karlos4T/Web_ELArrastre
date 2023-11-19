@@ -1,6 +1,9 @@
 .t-green {
     color: #02BD5Fff;
 }
+.t-dark-green {
+    color: #035d31;
+}
 .t-orange {
     color: rgb(251, 143, 76);
 }
@@ -13,7 +16,6 @@
 
 .impact {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-weight: 700;
 }
 
 ::-webkit-scrollbar{
@@ -34,7 +36,6 @@ body{
     --federal-blue: #0D0E53ff;
     --space-cadet: #202852ff;
     background-color: #E5EBEAff;
-    color: #02BD5Fff;
 }
 
 .menu{
@@ -72,7 +73,7 @@ a{
 
 #main .register-default form{
     display: flex;
-    align-items: center;co
+    align-items: center;
     justify-content: center;
     flex-direction: column;
 }
@@ -169,10 +170,11 @@ a{
 
 .contact{
     background: #F79251ff;
+    color: #a63f01;
 }
 
-.contact{
-    color: rgb(86, 51, 28);
+.contact .line{
+    border: solid 2px #a63f01;
 }
 
 .filter{
@@ -268,10 +270,12 @@ button:hover .sort{
 }
 
 .cont-name{
-    width: auto;
+    width: 100%;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 
 .info{
