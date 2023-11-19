@@ -8,7 +8,7 @@
     color: rgb(251, 143, 76);
 }
 .t-blue {
-    color: #0D0E53ff;
+    color: #0d0d57;
 }
 .t-orange-light{
     color: #ffe2bf;
@@ -65,7 +65,7 @@ a{
 }
 
 #main .register-default{
-    background-color: #0D0E53ff;
+    background-color: #040653;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -136,7 +136,7 @@ a{
     display: flex;
     align-items: center;
     min-height: 500px;
-    background-color: #02BD5Fff;
+    background-color: #00c05b;
     color: #0D0E53ff;
     border-top: #02BD5Fff 2px solid ;
 }
@@ -169,7 +169,7 @@ a{
 }
 
 .contact{
-    background: #F79251ff;
+    background: #ff9149;
     color: #a63f01;
 }
 
