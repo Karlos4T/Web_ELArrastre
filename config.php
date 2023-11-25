@@ -7,7 +7,12 @@
     define('DB_LOCAL_DB', "elarrastre");
 
     define('DB_HOSTINGER_HOST', "localhost");
-    define('DB_HOSTINGER_USER', "u463589001_user4t");
-    define('DB_HOSTINGER_PASSWORD', "8@Bcv*CSv|V");
-    define('DB_HOSTINGER_DB', "u463589001_elarrastre");
+    define('DB_HOSTINGER_USER', "u463589001_elarrastre");
+    define('DB_HOSTINGER_PASSWORD', "S9&+!v#4#z");
+    define('DB_HOSTINGER_DB', "u463589001_elarrastre2");
+    
+    //define('DB_HOSTINGER_HOST', "localhost");
+    //define('DB_HOSTINGER_USER', "u463589001_user4t");
+    //define('DB_HOSTINGER_PASSWORD', "8@Bcv*CSv|V");
+    //define('DB_HOSTINGER_DB', "u463589001_elarrastre");
 ?>

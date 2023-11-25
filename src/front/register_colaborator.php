@@ -20,12 +20,13 @@
         <input required class="form-control my-3" type="text" name="name" placeholder="Nombre de persona o entidad">
         <input required class="form-control my-3" type="text" name="mail" placeholder="Correo o teléfono de contacto">
         <textarea required class="form-control my-3" name="message" id="" cols="30" placeholder="¿Cuál es tu propuesta?" rows="5"></textarea>
-        <div class="form-group d-flex justify-content-center">
+        <div class="form-group d-flex justify-content-center mb-3">
             <input type="file" class="form-control-file d-none" name="img" accept="image/*" id="imagen">
             <label class="btn btn-primary ml-3" for="imagen"><b>+ Añade el logotipo de tu entidad</b></label> <span class="p-2 mx-2"><b>(opcional)</b></span>
         </div>
+        <span class="py-2"><b>Incluye aqui el enlace a tu web o redes sociales:</b></span>
         <div class="form-group d-flex justify-content-center">
-            <input class="form-control my-3" type="text" name="link" placeholder="Página web o redes sociales"><span class="p-2 mx-2 my-3"><b>(opcional)</b></span>
+            <input class="form-control mb-3 mt-1" type="text" name="link" placeholder="Página web o redes sociales"><span class="p-2 mx-2"><b>(opcional)</b></span>
         </div>
         <div class="d-flex justify-content-end">
             <button type="submit" class="btn btn-success">Enviar</button>

@@ -1,3 +1,5 @@
+<html>
+    
 <?php
 
     include "./includes.php";
@@ -16,7 +18,7 @@
                     if (!empty($name)){
                         $name = mysqli_real_escape_string($con, $name);
                         $query = "INSERT INTO `names` (`name`, `ip`) VALUES ('$name', '')";
-                        $res = mysqli_query($con, $query);
+                       $res = mysqli_query($con, $query);
                         if ($res)
                         header("Location: ../front/?msg");
                     else
@@ -45,3 +47,4 @@
             echo "Error de conexión con la db";
     }
 ?>
+</html>

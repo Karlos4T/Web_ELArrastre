@@ -1,10 +1,10 @@
 <?php
 function hostConnect()
 {
-    $host = constant("DB_LOCAL_HOST");
-    $user = constant("DB_LOCAL_USER");
-    $key = constant("DB_LOCAL_PASSWORD");
-    $db = constant("DB_LOCAL_DB");
+    $host = constant("DB_HOSTINGER_HOST");
+    $user = constant("DB_HOSTINGER_USER");
+    $key = constant("DB_HOSTINGER_PASSWORD");
+    $db = constant("DB_HOSTINGER_DB");
     
     $con = mysqli_connect($host, $user, $key, $db);
     

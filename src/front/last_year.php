@@ -19,7 +19,7 @@
             <img class="w-100 p-2 p-md-5 photo-blue" src="../../assets/imgs/logros3.jpg" alt="">
         </div>
         <h3 class="text-center t-dark-green">+ de <b>5000€ recaudados</b></h3>
-        <p class="text-center t-dark-green"><b>Con nuestra jornada solidaria conseguimos recaudar una generosa cantidad de dinero que ha podido ayudar en la lucha contra el ELA.</b></p>
+        <p class="text-center t-dark-green"><b>Con nuestra jornada solidaria conseguimos recaudar una generosa cantidad de dinero que ha podido ayudar en la lucha contra la ELA.</b></p>
     </div>
     <h1 class="text-center impact t-dark-green my-4">¡SUPERÉMOSLO JUNTOS!</h1>
 </div>
