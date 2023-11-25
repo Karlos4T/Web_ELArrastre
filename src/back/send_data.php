@@ -40,6 +40,14 @@
                 update_link_collaborator($con, $_POST);
             elseif (isset($_POST["update-img"]))
                 update_img_collaborator($con, $_POST, $_FILES);
+            elseif (isset($_POST["post-question"]))
+                post_question($con, $_POST);
+            elseif (isset($_POST["update-question"]))
+                update_question($con, $_POST);
+            elseif (isset($_POST["show-question"]))
+                show_question($con, $_POST);
+            elseif (isset($_POST["hide-question"]))
+                hide_question($con, $_POST);
             else 
                 echo "Error al procesar la solicitud";
         }

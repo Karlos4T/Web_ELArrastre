@@ -161,4 +161,94 @@
 </script>
 
 
+<div class="modal fade animated zoomIn" id="edit_question" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="miModalLabel">Editar pregunta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="question" action="../back/send_data.php" method="post">
+          <input type="hidden" id="questionId" name="id" value="">
+          <input type="hidden" name="update-question">
+          <div class="d-flex flex-column">
+            <input type="text" class="form-control" placeholder="Pregunta" name="question">
+            <textarea name="answer" id="" cols="30" rows="10"></textarea>
+            <button type="submit" class="btn btn-success mx-2"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </form>
+        <div class="row d-flex justify-content-center py-3" style="max-height: 800px">
+          <img class="col-8 d-none" id="userImage" src="" alt="Imagen del usuario">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  $('#edit_question').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget); 
+    var datos = button.data('datos');
+
+    $('#questionId').val(datos.id);
+    $('input[name="question"]').val(datos.question);
+    $('textarea[name="answer"]').text(datos.answer);
+  });
+</script>
+
+<div class="modal fade animated zoomIn" id="add_question" tabindex="-1" role="dialog" aria-labelledby="miModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="miModalLabel">Añadir nueva pregunta</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Cerrar">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form id="question" action="../back/send_data.php" method="post">
+          <input type="hidden" name="post-question" value="1">
+          <div class="d-flex flex-column">
+            <input type="text" class="form-control" placeholder="Pregunta" name="question">
+            <textarea name="answer" id="" cols="30" rows="10" placeholder="Respuesta"></textarea>
+            <button type="submit" class="btn btn-success mx-2"><i class="fa-solid fa-arrow-right"></i></button>
+          </div>
+        </form>
+        <div class="row d-flex justify-content-center py-3" style="max-height: 800px">
+          <img class="col-8 d-none" id="userImage" src="" alt="Imagen del usuario">
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+  $('#add_question').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget); 
+    var datos = button.data('datos');
+
+    $('#userId').val(datos.id);
+    $('input[name="question"]').val(datos.question);
+    $('textarea[name="answer"]').text(datos.answer);
+  });
+</script>
+
+
 </body>

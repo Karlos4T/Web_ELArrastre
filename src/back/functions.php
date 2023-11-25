@@ -46,6 +46,43 @@ function post_collaborator($con, $data, $img)
     
 }
 
+function post_question($con, $data)
+{
+    $question = $data['question'];
+    if (isset($data['answer']))
+        $answer = $data['answer'];
+    else
+        $answer = '';
+    $query = "INSERT INTO `Questions` (`question`, `answer`) VALUES ('$question', '$answer')";
+    $res = mysqli_query($con, $query);
+    if ($res)
+    {
+        if(isset($_SESSION['rol']))
+            header("Location: ../admin23k9sp034i2nmd-93482sf/");
+        else
+            header("Location: ../front/?msg_question");
+    }
+}
+
+function update_question($con, $data)
+{
+    $id = $data['id'];
+    $question = $data['question'];
+    if (isset($data['answer']))
+        $answer = $data['answer'];
+    else
+        $answer = '';
+    $query = "UPDATE `Questions` SET `question` = '$question', `answer` = '$answer' WHERE `id` = '$id'";
+    $res = mysqli_query($con, $query);
+    if ($res)
+    {
+        if(isset($_SESSION['rol']))
+            header("Location: ../admin23k9sp034i2nmd-93482sf/");
+        else
+            header("Location: ../front/?msg_question");
+    }
+}
+
 function update_link_collaborator($con, $data)
 {
     $query = "UPDATE `collaborators` SET `link`='{$data['link']}' WHERE `id` = '{$data['id']}'";
@@ -96,6 +133,38 @@ function get_users($con)
     $res = mysqli_query($con, $query);
     if ($res)
         return (mysqli_fetch_array($res));
+}
+
+function get_questions($con)
+{
+    $query = "SELECT `id`, `question`, `answer` FROM `Questions` WHERE `mostrar` = '1'";
+    $res = mysqli_query($con, $query);
+    if ($res)
+        return ($res);
+}
+
+function get_all_questions($con)
+{
+    $query = "SELECT `id`, `question`, `answer`, `mostrar` FROM `Questions`";
+    $res = mysqli_query($con, $query);
+    if ($res)
+        return ($res);
+}
+
+function hide_question($con, $data)
+{
+    $query = "UPDATE `Questions` SET `mostrar`='0' WHERE `id` = '{$data['id']}'";
+    $res = mysqli_query($con, $query);
+    if ($res)
+        header("Location: ../admin23k9sp034i2nmd-93482sf/");
+}
+
+function show_question($con, $data)
+{
+    $query = "UPDATE `Questions` SET `mostrar`='1' WHERE `id` = '{$data['id']}'";
+    $res = mysqli_query($con, $query);
+    if ($res)
+        header("Location: ../admin23k9sp034i2nmd-93482sf/");
 }
 
 function hide_user($con, $data)

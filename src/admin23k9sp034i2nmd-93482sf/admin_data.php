@@ -26,6 +26,11 @@
                     print_collaborators_table($_GET, $con);
                 ?>
             </div>
+            <div class="col-12 col-lg-6">
+                <?php
+                    print_questions_table($_GET, $con);
+                ?>
+            </div>
         </div>
     </div>
 </body>

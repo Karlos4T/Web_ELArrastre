@@ -85,65 +85,124 @@ function print_users_table($data, $con)
 }
 
 
-    function print_collaborators_table($data, $con)
-    {
-        ?>
-            <div class="card p-4 bg-light">
-                <h4 class="text-center mb-3"><b>COLABORADORES</b></h4>
+function print_collaborators_table($data, $con)
+{
+    ?>
+        <div class="card p-4 bg-light">
+            <h4 class="text-center mb-3"><b>COLABORADORES</b></h4>
+            
+            <div class="table">
+                <?php
+                $query = "SELECT `id`, `name`, `mail`, `message`, `path_img`, `mostrar` FROM `collaborators` ORDER BY `id` DESC";
                 
-                <div class="table">
-                    <?php
-                    $query = "SELECT `id`, `name`, `mail`, `message`, `path_img`, `mostrar` FROM `collaborators` ORDER BY `id` DESC";
-                    
-                    $data = mysqli_query($con, $query);
-                    if ($data) {
-                        while ($row = mysqli_fetch_array($data)) {
-                            ?>
-                    <div class="row_table d-flex justify-content-between m-0">
-                        <div class="cont-name">
-                            <h6 class="m-0 d-flex h-100 name align-items-center"><?php echo $row['name']; ?></h6>
-                            <h6 class="m-0 d-flex h-100 name align-items-center d-none d-md-block"><?php echo $row['mail']; ?></h6>
-                        </div>
-                        <?php
-                            if($row['mostrar'] == 0)
-                            {
-                                ?>
-                                    <form action="../back/send_data.php" method="POST">
-                                        <input type="hidden" name="id" value="<?php echo $row['id'];?>">
-                                        <input type="hidden" name="show" value="1">
-                                        <button type="submit" class="btn btn-outline-success p-0 m-1">
-                                            <i class="fa-solid fa-eye-slash p-2"></i>
-                                        </button>
-                                    </form>
-                                <?php
-                            }
-                            else
-                            {
-                                ?>
-                                    <form action="../back/send_data.php" method="POST">
-                                        <input type="hidden" name="id" value="<?php echo $row['id'];?>">
-                                        <input type="hidden" name="hide" value="1">
-                                        <button type="submit" class="btn btn-success bg-success p-0 m-1">
-                                            <i class="fa-solid fa-eye p-2"></i>
-                                        </button>
-                                    </form>
-                                <?php
-                            }
+                $data = mysqli_query($con, $query);
+                if ($data) {
+                    while ($row = mysqli_fetch_array($data)) {
                         ?>
-                        <button class="btn btn-warning p-0 m-1"  data-toggle="modal" data-target="#show_collaborators" data-datos='<?php echo json_encode($row);?>'>
-                            <i class="fa-solid fa-plus p-2"></i>
-                        </button>
+                <div class="row_table d-flex justify-content-between m-0">
+                    <div class="cont-name">
+                        <h6 class="m-0 d-flex h-100 name align-items-center"><?php echo $row['name']; ?></h6>
+                        <h6 class="m-0 d-flex h-100 name align-items-center d-none d-md-block"><?php echo $row['mail']; ?></h6>
                     </div>
                     <?php
+                        if($row['mostrar'] == 0)
+                        {
+                            ?>
+                                <form action="../back/send_data.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                                    <input type="hidden" name="show" value="1">
+                                    <button type="submit" class="btn btn-outline-success p-0 m-1">
+                                        <i class="fa-solid fa-eye-slash p-2"></i>
+                                    </button>
+                                </form>
+                            <?php
                         }
-                    } else 
-                        echo 'error';
+                        else
+                        {
+                            ?>
+                                <form action="../back/send_data.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                                    <input type="hidden" name="hide" value="1">
+                                    <button type="submit" class="btn btn-success bg-success p-0 m-1">
+                                        <i class="fa-solid fa-eye p-2"></i>
+                                    </button>
+                                </form>
+                            <?php
+                        }
                     ?>
+                    <button class="btn btn-warning p-0 m-1"  data-toggle="modal" data-target="#show_collaborators" data-datos='<?php echo json_encode($row);?>'>
+                        <i class="fa-solid fa-plus p-2"></i>
+                    </button>
                 </div>
-                <button type="button" class="btn btn-success my-2" data-toggle="modal" data-target="#add_collaborator">
-                    <b>+ Añadir colaborador</b>
-                </button>
+                <?php
+                    }
+                } else 
+                    echo 'error';
+                ?>
             </div>
-        <?php
-    }
+            <button type="button" class="btn btn-success my-2" data-toggle="modal" data-target="#add_collaborator">
+                <b>+ Añadir colaborador</b>
+            </button>
+        </div>
+    <?php
+}
+
+
+function print_questions_table($data, $con)
+{
+    ?>
+        <div class="card p-4 bg-light">
+            <h4 class="text-center mb-3"><b>PREGUNTAS</b></h4>
+            
+            <div class="table">
+                <?php
+                $questions = get_all_questions($con);
+                
+                while ($row = mysqli_fetch_array($questions)) {
+                    ?>
+                <div class="row_table d-flex justify-content-between m-0">
+                    <div class="cont-name">
+                        <h6 class="m-0 d-flex h-100 name align-items-center"><?php echo $row['question']; ?></h6>
+                        <h6 class="m-0 d-flex h-100 name align-items-center d-none d-md-block"><?php echo $row['answer']; ?></h6>
+                    </div>
+                    <?php
+                        if($row['mostrar'] == 0)
+                        {
+                            ?>
+                                <form action="../back/send_data.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                                    <input type="hidden" name="show-question" value="1">
+                                    <button type="submit" class="btn btn-outline-success p-0 m-1">
+                                        <i class="fa-solid fa-eye-slash p-2"></i>
+                                    </button>
+                                </form>
+                            <?php
+                        }
+                        else
+                        {
+                            ?>
+                                <form action="../back/send_data.php" method="POST">
+                                    <input type="hidden" name="id" value="<?php echo $row['id'];?>">
+                                    <input type="hidden" name="hide-question" value="1">
+                                    <button type="submit" class="btn btn-success bg-success p-0 m-1">
+                                        <i class="fa-solid fa-eye p-2"></i>
+                                    </button>
+                                </form>
+                            <?php
+                        }
+                    ?>
+                    <button class="btn btn-warning p-0 m-1"  data-toggle="modal" data-target="#edit_question" data-datos='<?php echo json_encode($row);?>'>
+                        <i class="fa-solid fa-plus p-2"></i>
+                    </button>
+                </div>
+                <?php
+                    }
+                ?>
+            </div>
+            <button type="button" class="btn btn-success my-2" data-toggle="modal" data-target="#add_question">
+                <b>+ Añadir pregunta</b>
+            </button>
+        </div>
+    <?php
+}
 ?>

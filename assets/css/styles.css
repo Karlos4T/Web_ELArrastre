@@ -113,6 +113,11 @@ a{
     font-weight: 700;
 }
 
+.question-card{
+    background-color: rgb(254, 189, 89);
+    color: rgb(110, 69, 7);
+    border-radius: 52% 48% 53% 47% / 68% 45% 55% 32%;
+}
 
 .collaborators{
     font-weight: 700;
