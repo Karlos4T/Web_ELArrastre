@@ -1,6 +1,6 @@
 <div id="info" class="p-2 p-md-5">
     <h2 class="impact text-center my-3 t-blue"><i class="fa-solid fa-circle-plus mx-2"></i>INFORMACIÓN</h2>
-    <div>
+    <div class="d-none">
         <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus dicta veniam atque possimus delectus est distinctio iure? Dolorem aut laborum delectus, est omnis saepe totam architecto vero, officia reprehenderit quasi?</p>
     </div>
     <h4 class="impact text-center my-3 t-blue">VUESTRAS PREGUNTAS</h4>
@@ -10,15 +10,17 @@
         while ($row = mysqli_fetch_array($questions))
         {
             ?>
-            <div class="question-card w-auto p-3 text-center">
-                <div class="h5 impact my-2"><?php echo ($row["question"]);?></div>
-                <div class="h6"><?php echo ($row["answer"]); ?></div>
+            <div class="col-12 col-md-6 col-lg-4 m-3">
+                <div class="question-card w-auto p-3 text-center">
+                    <div class="h5 impact my-2"><?php echo ($row["question"]);?></div>
+                    <div class="h6"><?php echo ($row["answer"]); ?></div>
+                </div>
             </div>
             <?php
         }
         ?>
     </div>
-    <h5 class="text-center my-3 mb-5">Si tienes alguna otra duda sobre el evento pregúntanos aquí</h5>
+    <h5 class="text-center mt-3 mb-4">¿Tienes alguna duda sobre el evento? pregúntanos aquí</h5>
     <form action="../back/send_data.php" method="POST" class="d-flex justify-content-center">
         <input type="hidden" name="post-question"> 
         <div class="d-flex col-12 col-md-6 col-lg-4">
