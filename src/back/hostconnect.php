@@ -14,11 +14,11 @@ function hostConnect()
     $local_db = constant("DB_LOCAL_DB");
 
     // Intentar conexión con las credenciales de Hostinger
-    $con = mysqli_connect($host_host, $host_user, $host_key, $host_db);
     
+    $con = mysqli_connect($local_host, $local_user, $local_key, $local_db);
     // Si la conexión falla, intentar con las credenciales locales
     if (!$con) {
-        $con = mysqli_connect($local_host, $local_user, $local_key, $local_db);
+        $con = mysqli_connect($host_host, $host_user, $host_key, $host_db);
 
         // Si también falla la conexión local, detener el script
         if (!$con) {

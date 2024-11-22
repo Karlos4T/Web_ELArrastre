@@ -3,27 +3,35 @@
 function print_users_table($data, $con)
 {
     ?>
-        <div class="card p-4 bg-light">
+        <div class="p-4 bg-light">
             <h4 class="text-center"><b>ASISTENTES</b></h4>
             <div class="filter w-100 d-flex justify-content-end mt-2">
-                <form action="./admin_data.php" method="GET" class="d-flex flex-wrap justify-content-between justify-content-md-end align-items-center mb-4">
-                    <input type="hidden" name="users" value="1">
-                    <div class="search d-flex mx-1">
-                        <input name="intext" type="text" class="intext h-100 py-2 px-3" placeholder="Buscar">
-                        <button type="submit" class="px-2 d-flex align-items-center btn-searchers" value=""><span class="material-symbols-outlined">search</span></button>
-                    </div>
-                    <div class="order d-flex mx-1">
-                        <select class="select px-2 py-1" name="order" id="">
-                            <option value="`id` DESC">Mas reciente</option>
-                            <option value="`id` ASC">Mas antiguo</option>
+            <form action="./admin_data.php" method="GET" class="d-flex flex-wrap justify-content-between justify-content-md-end align-items-center mb-4">
+                <input type="hidden" name="users" value="1">
+
+                <!-- Search field -->
+                <div class="search d-flex mx-1">
+                    <input name="intext" type="text" class="intext py-2 px-3" placeholder="Buscar">
+                    <button type="submit" class="btn-searchers"><span class="material-symbols-outlined">search</span></button>
+                </div>
+                <div class="d-flex w-100 justify-content-between">
+
+                    <!-- Sorting dropdown -->
+                    <div class="order w-100 d-flex mx-1">
+                        <select class="select w-100 px-2 py-1" name="order" id="">
+                            <option value="`id` DESC">Más reciente</option>
+                            <option value="`id` ASC">Más antiguo</option>
                             <option value="`name` ASC">A-Z</option>
                             <option value="`name` DESC">Z-A</option>
                         </select>
-                        <button type="submit" class="h-100 p-auto px-2 py-1 d-flex align-items-center btn-searchers" value=""><span class="material-symbols-outlined sort">sort</span></button>
+                        <button type="submit" class="btn-searchers"><span class="material-symbols-outlined">sort</span></button>
                     </div>
-                    <a class="btn-reset mx-1 d-flex p-2 align-content-center m-0" href="./admin_data.php"><i class="fa-solid fa-broom"></i></a>
-                </form>
-            </div>
+                    
+                    <!-- Reset button -->
+                    <a class="btn-reset mx-1" href="./admin_data.php"><i class="fa-solid fa-broom"></i></a>
+                </div>
+            </form>
+        </div>
             <div class="table">
 
                 <?php
@@ -66,7 +74,7 @@ function print_users_table($data, $con)
                                         <form action="../back/send_data.php" method="POST">
                                             <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                             <input type="hidden" name="delete" value="1">
-                                            <button style="border: none" type="submit" class="text-danger p-0 m-1">
+                                            <button style="border: none; background: transparent" type="submit" class="text-danger p-0 m-1">
                                                 <i class="fa-solid fa-trash p-2"></i>
                                             </button>
                                         </form>
@@ -88,7 +96,7 @@ function print_users_table($data, $con)
 function print_collaborators_table($data, $con)
 {
     ?>
-        <div class="card p-4 bg-light">
+        <div class=" p-4 bg-light">
             <h4 class="text-center mb-3"><b>COLABORADORES</b></h4>
             
             <div class="table">
@@ -111,8 +119,8 @@ function print_collaborators_table($data, $con)
                                 <form action="../back/send_data.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                     <input type="hidden" name="show" value="1">
-                                    <button type="submit" class="btn btn-outline-success p-0 m-1">
-                                        <i class="fa-solid fa-eye-slash p-2"></i>
+                                    <button type="submit" style="background: transparent" class="btn btn-outline-success p-0 m-1">
+                                        <i class="fa-solid fa-eye-slash text-success p-2"></i>
                                     </button>
                                 </form>
                             <?php
@@ -123,7 +131,7 @@ function print_collaborators_table($data, $con)
                                 <form action="../back/send_data.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                     <input type="hidden" name="hide" value="1">
-                                    <button type="submit" class="btn btn-success bg-success p-0 m-1">
+                                    <button type="submit" class="btn  bg-success p-0 m-1">
                                         <i class="fa-solid fa-eye p-2"></i>
                                     </button>
                                 </form>
@@ -140,7 +148,7 @@ function print_collaborators_table($data, $con)
                     echo 'error';
                 ?>
             </div>
-            <button type="button" class="btn btn-success my-2" data-toggle="modal" data-target="#add_collaborator">
+            <button type="button" class="btn  my-2" data-toggle="modal" data-target="#add_collaborator">
                 <b>+ Añadir colaborador</b>
             </button>
         </div>
@@ -151,7 +159,7 @@ function print_collaborators_table($data, $con)
 function print_questions_table($data, $con)
 {
     ?>
-        <div class="card p-4 bg-light">
+        <div class=" p-4 bg-light">
             <h4 class="text-center mb-3"><b>PREGUNTAS</b></h4>
             
             <div class="table">
@@ -172,8 +180,8 @@ function print_questions_table($data, $con)
                                 <form action="../back/send_data.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                     <input type="hidden" name="show-question" value="1">
-                                    <button type="submit" class="btn btn-outline-success p-0 m-1">
-                                        <i class="fa-solid fa-eye-slash p-2"></i>
+                                    <button type="submit" style="background: transparent" class="btn btn-outline-success p-0 m-1">
+                                        <i class="fa-solid fa-eye-slash text-success p-2"></i>
                                     </button>
                                 </form>
                             <?php
@@ -184,7 +192,7 @@ function print_questions_table($data, $con)
                                 <form action="../back/send_data.php" method="POST">
                                     <input type="hidden" name="id" value="<?php echo $row['id'];?>">
                                     <input type="hidden" name="hide-question" value="1">
-                                    <button type="submit" class="btn btn-success bg-success p-0 m-1">
+                                    <button type="submit" class="btn  bg-success p-0 m-1">
                                         <i class="fa-solid fa-eye p-2"></i>
                                     </button>
                                 </form>
@@ -199,7 +207,7 @@ function print_questions_table($data, $con)
                     }
                 ?>
             </div>
-            <button type="button" class="btn btn-success my-2" data-toggle="modal" data-target="#add_question">
+            <button type="button" class="btn  my-2" data-toggle="modal" data-target="#add_question">
                 <b>+ Añadir pregunta</b>
             </button>
         </div>

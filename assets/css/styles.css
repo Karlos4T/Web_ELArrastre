@@ -339,7 +339,6 @@ h1, h2, h3, h4, h5 {
 
 /* Input y botón */
 form {
-    margin-top: 2rem;
     justify-content: center;
 }
 
@@ -565,4 +564,189 @@ form button[type="submit"]:hover {
     50% {
         transform: translateY(10px); /* Rebote hacia abajo */
     }
+}
+
+/* General container styling */
+#admin-data {
+    font-family: Arial, sans-serif;
+}
+
+#admin-data h1 {
+    font-size: 1.8rem;
+}
+
+/* Card styling */
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card h4 {
+    color: #333;
+}
+
+/* Table styles */
+.table {
+    background: #ffffff;
+    border-radius: 5px;
+}
+
+.row_table {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+    align-items: center;
+}
+
+.row_table:last-child {
+    border-bottom: none;
+}
+
+.cont-name {
+    flex: 1;
+}
+
+/* Buttons styling */
+.btn {
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Delete button (no background) */
+.btn-delete {
+    background: none;
+    color: #ff0000;
+    font-size: 0.9rem;
+}
+
+/* Visible / invisible buttons */
+.btn-visibility-visible {
+    background: #28a745;
+    color: #ffffff;
+}
+
+.btn-visibility-invisible {
+    background: none;
+    color: #28a745;
+}
+
+/* Upload button (orange) */
+.btn-upload {
+    background: #ff9800;
+    color: #ffffff;
+}
+
+/* Align buttons to the right */
+.row_table form {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Filter section styling */
+.filter {
+    background-color: #f8f9fa; /* Light gray background for separation */
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+}
+
+.filter form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.filter form .search{
+    width: 100%;
+}
+
+/* Input text field */
+.filter .intext {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #495057;
+    outline: none;
+    transition: border-color 0.3s ease;
+    width: 200px;
+}
+
+.filter .intext:focus {
+    border-color: #007bff; /* Blue border on focus */
+}
+
+/* Search button */
+.filter .btn-searchers {
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.filter .btn-searchers:hover {
+    background: #0056b3;
+}
+
+.filter .btn-searchers span {
+    font-size: 18px;
+}
+
+/* Select dropdown */
+.filter .select {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #495057;
+    background-color: white;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.filter .select:focus {
+    border-color: #007bff;
+}
+
+/* Reset button */
+.filter .btn-reset {
+    color: #dc3545; /* Red color for reset */
+    font-size: 16px;
+    padding: 10px 15px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease;
+}
+
+.filter .btn-reset:hover {
+    color: #a71d2a; /* Darker red on hover */
+}
+
+.filter .btn-reset i {
+    font-size: 18px;
 }
