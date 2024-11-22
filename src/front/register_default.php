@@ -1,4 +1,4 @@
-<div id="apuntate" class="register-default">
+<div id="apuntate" class="register-default my-5 py-5">
     <div class="row m-0 w-100">
         <!-- Sección izquierda con imagen -->
         <div class="col-6 p-0 d-none d-lg-block p-5">
@@ -10,7 +10,9 @@
                 <div class="container-text d-flex flex-column text-center align-items-center my-3">
                     <h5 class="">Si ya tienes pensado venir...</h5>
                     <h1 class=" my-3">Apúntate a ti y a tus acompañantes</h1>
-                    <i class="fa-solid fa-circle-down h1  mt-2"></i>
+                    <div class="arrow-container">
+                        <i class="fa-solid fa-circle-down"></i>
+                    </div>
                 </div>
                 <!-- Formulario -->
                 <form id="registerForm" action="../back/send_data.php" method="post" class="w-100">
@@ -22,7 +24,7 @@
                     </div>
                     <div class="container d-flex justify-content-between w-100 px-3">
                         <button type="button" onclick="generarInput()" class="add_person px-2 mt-2">+ añadir acompañante</button>
-                        <button id="btn" type="submit" disabled class="btn btn-success mt-2">Enviar</button>
+                        <button id="btn" type="submit" class="btn btn-success mt-2">Enviar</button>
                     </div>
                 </form>
             </div>

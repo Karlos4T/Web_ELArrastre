@@ -1,4 +1,4 @@
-<div id="info" class="p-2 p-md-5">
+<div id="info" class="p-2 p-md-5 my-5 py-5">
     <h2 class="impact text-center my-3 t-blue"><i class="fa-solid fa-circle-plus mx-2"></i>INFORMACIÓN</h2>
     <div class="d-none">
         <p class="text-center">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloribus dicta veniam atque possimus delectus est distinctio iure? Dolorem aut laborum delectus, est omnis saepe totam architecto vero, officia reprehenderit quasi?</p>
@@ -20,7 +20,7 @@
         }
         ?>
     </div>
-    <h5 class="text-center mt-3 mb-4">¿Tienes alguna duda sobre el evento? pregúntanos aquí</h5>
+    <h5 class="text-center mt-5 mb-4">¿Tienes alguna duda sobre el evento? pregúntanos aquí</h5>
     <form action="../back/send_data.php" method="POST" class="d-flex justify-content-center">
         <input type="hidden" name="post-question"> 
         <div class="d-flex col-12 col-md-6 col-lg-4">

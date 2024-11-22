@@ -22,14 +22,10 @@
             include "./register_default.php";
             include "./info.php";
             include "./register_colaborator.php";
-        ?>
-        </div>
-            <?php
-                include "./collaborators.php";
-            ?>
-        <?php
+            include "./collaborators.php";
             include "./last_year.php";
-        ?>
+            ?>
+            </div>
     </div>
     <script src="../../assets/js/javascript.js"></script>
 </body>

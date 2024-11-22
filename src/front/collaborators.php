@@ -1,3 +1,4 @@
+<div class="collaborators my-5 py-5">
 <?php 
     $arr = get_collaborators($con);
     ?>
@@ -13,7 +14,7 @@
                     {
                         ?>
                         <a <?php if (!empty($row['link'])){?>href="<?php echo $row['link']?>" <?php }?> class="card_colab col-6 col-sm-4 col-md-3 col-lg-2 p-3">
-                            <p class="name_collab text-center mt-3 h3 t-blue"><b><?php echo $row['name'];?></b></p>
+                            <p class="name_collab text-center mt-3 h3 t-blue px-3 py-1"><b><?php echo $row['name'];?></b></p>
                         </a>  
                         <?php
                     }
@@ -32,7 +33,7 @@
                             <div class="h-100 d-flex align-items-center justify-content-center p-3 pb-0">
                                 <img class="logo_collab" src="<?php echo('../../assets/imgs/collaborators/'.$row['path_img']);?>" alt="">
                             </div>
-                            <p class="name_collab text-center mt-3 t-blue"><?php echo $row['name'];?></p>
+                            <p class="name_collab text-center mt-3 px-3 py-1 t-blue"><?php echo $row['name'];?></p>
                         </a>
                         <?php
                     }
@@ -40,4 +41,5 @@
             <?php
         }    
     ?>
+    </div>
     </div>
