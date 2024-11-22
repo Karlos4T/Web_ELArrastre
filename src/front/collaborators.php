@@ -1,7 +1,7 @@
 <?php 
     $arr = get_collaborators($con);
     ?>
-    <h2 class="m-3 text-center t-blue impact">COLABORADORES</h2>
+    <h2 class="m-3 mt-5 text-center t-blue impact">COLABORADORES</h2>
     <div class="collaborators m-0 p-2 p-md-5 d-flex flex-wrap row">
     <?php
         while ($row = mysqli_fetch_array($arr))

@@ -1,4 +1,4 @@
-<div class="contact row m-0 d-flex justify-content-center px-md-5 p-3">
+<div class="contact row m-4 d-flex justify-content-center px-md-5 p-3">
     <h2 class="text-center my-3 impact">¿QUIERES COLABORAR DE MANERA EXTRAORDINARIA?</h2>
     <div class="col-12 col-md-5 d-flex align-items-center">
         <div class="p-lg-5">

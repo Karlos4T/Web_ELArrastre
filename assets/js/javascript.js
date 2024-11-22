@@ -27,7 +27,7 @@ generarInput = (e) => {
     nuevoInput.className = "form-control my-3 p-2 w-100";
     nuevoInput.name = "name" + contadorInputs;
     
-    nuevoDelBtn.className = "btn-del-input";
+    nuevoDelBtn.className = "btn-del-input mx-2 my-3";
     nuevoDelBtn.id = contadorInputs;
     nuevoDelBtn.addEventListener("click", function(e){
         e.preventDefault()

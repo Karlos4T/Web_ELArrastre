@@ -1,44 +1,45 @@
-.t-green {
-    color: #02BD5Fff;
-}
-.t-dark-green {
-    color: #035d31;
-}
-.t-orange {
-    color: rgb(251, 143, 76);
-}
-.t-blue {
-    color: #0d0d57;
-}
-.t-orange-light{
-    color: #ffe2bf;
+/* Variables globales */
+:root {
+    --green: #7dd955;
+    --dark-green: #035d31;
+    --orange: #ff914d;
+    --blue: #0149ac;
+    --orange-light: #ffde59;
+    --antiflash-white: #ffffff;
+    --federal-blue: #0D0E53ff;
+    --space-cadet: #202852ff;
 }
 
-.impact {
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+/* Colores de texto */
+.t-green,
+.t-dark-green,
+.t-orange,
+.t-blue,
+.t-orange-light {
+    color: var(--green), var(--dark-green), var(--orange), var(--blue), var(--orange-light);
 }
 
-::-webkit-scrollbar{
+/* Scrollbar */
+::-webkit-scrollbar {
     width: 10px;
-    background: #E5EBEAff;
+    background: var(--antiflash-white);
     border-radius: 50vw;
 }
 
-::-webkit-scrollbar-thumb{
-    background-color: #0D0E53ff;
-    border: 2px solid #E5EBEAff;
+::-webkit-scrollbar-thumb {
+    background-color: var(--federal-blue);
+    border: 2px solid var(--antiflash-white);
     border-radius: 10px;
 }
 
-body{    
+/* Base del body */
+body {
     overflow-x: hidden;
-    --antiflash-white: #E5EBEAff;
-    --federal-blue: #0D0E53ff;
-    --space-cadet: #202852ff;
-    background-color: #E5EBEAff;
+    background-color: var(--antiflash-white);
 }
 
-.menu{
+/* Menú */
+.menu {
     height: 10vh;
     background-color: #fff;
 }
@@ -51,347 +52,403 @@ body{
 }
 
 .menu .img-cont .img {
-    padding: .6rem 0;
+    padding: 0.6rem 0;
 }
 
-a{
+/* Links */
+a {
     text-decoration: none;
 }
 
-#main .img_header {
+/* Imágenes generales */
+.img_header {
     object-fit: cover;
-    border-radius: 52% 48% 53% 47% / 68% 45% 55% 32% ;
-    animation: changeBorderRadius 30s infinite ease-in-out;
+    border-radius: 2.5rem;
 }
 
-#main .register-default{
-    background-color: #040653;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.long-bg {
+    background: url("../imgs/fondo_largo.png") no-repeat center/cover;
+    min-height: 400px;
 }
 
-#main .register-default form{
+/* Formularios */
+form {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-}
-
-
-.register-default form .add_person{
-    outline: none;
-    border: none;
-    background-color: transparent;
-    color: aliceblue;
-}
-
-.register-default form .btn-del-input{
-    outline: none;
-    border: none;
-    background-color: transparent;
-    color: aliceblue;
-    font-size: 1.5rem;
-    margin: 1rem 0 1rem 1rem;
-}
-
-.recive .logo1, .recive .logo2{
-    height: auto;
-    width: auto;
-}
-
-.recive .logo1{
-    transform: rotate(-10deg);
-}
-
-.recive .logo2{
-    transform: rotate(10deg);
-}
-
-.recive .fa-x{
-    font-size: 5rem;
-    font-weight: 700;
-}
-
-.question-card{
-    background-color: rgb(254, 189, 89);
-    color: rgb(110, 69, 7);
-    border-radius: 52% 48% 53% 47% / 68% 45% 55% 32%;
-}
-
-.collaborators{
-    font-weight: 700;
+    align-items: center;
     justify-content: center;
 }
 
-.collaborators .card_colab{
-    max-height: 300px;
-    max-width: 500px;
-    display:flex;
-    flex-direction:column;
-    justify-content:center;
-}
-.collaborators .logo_collab{
-    object-fit: contain;
-    mix-blend-mode: multiply;
-    max-width: 100%;
-    max-height: 100%;
+form .btn {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    font-size: 1.5rem;
 }
 
-.logros{
-    display: flex;
-    align-items: center;
-    min-height: 500px;
-    background-color: #00c05b;
-    color: #0D0E53ff;
-    border-top: #02BD5Fff 2px solid ;
+/* Cartas */
+.card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
 }
 
-.logros img{
-    object-fit: cover;
-    max-height: 400px;
-    transition: .3s;
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
 }
 
-.logros .photo-green {
-   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70% ;
-   transform: rotate(-3deg);
+/* Imágenes dinámicas */
+.img-dynamic {
+    border-radius: 50%;
+    transition: transform 0.3s, border-radius 0.3s;
 }
 
-.logros .photo-orange {
-   border-radius: 63% 37% 74% 26% / 30% 67% 33% 70% ;
-   transform: rotate(-5deg);
-}
-
-.logros .photo-blue {
-    border-radius: 22% 78% 18% 82% / 68% 45% 55% 32% ;
-    transform: rotate(2deg);
-}
-
-.logros img:hover {
+.img-dynamic:hover {
     border-radius: 0;
     transform: rotate(0);
-    transition: .3s;
 }
 
-.contact{
-    background: #ff9149;
-    color: #a63f01;
-}
-
-.contact .line{
-    border: solid 2px #a63f01;
-}
-
-.filter{
-    display: flex;
-    justify-content: space-between;
-}
-
-.btn-searchers{
+/* Botones y selectores */
+.btn,
+.select {
     background: transparent;
     border: 2px solid #6e6e6e;
-    border-radius: 0 5px 5px 0;
+    border-radius: 5px;
+    transition: 0.2s;
 }
 
-.btn-searchers:hover{
+.btn:hover,
+.select:hover {
     background: rgba(204, 204, 204, 0.347);
-    transition: .2s;
 }
 
-.btn-searchers:hover span{
-    transform: scale(105%);
-}
-
-.btn-reset{
-    color: #3d3d3d!important;
-    background: transparent;
-    border: 2px solid #6e6e6e;
-    border-radius: 20px;
-    text-decoration: none;
-    transition: .2s;
-}
-
-.btn-reset:hover{
-    text-decoration: none;
-    transform: scale(1.1);
-}
-
-.select{
-    background: transparent;
-    border-radius: 5px 0 0 5px;
-    border:  2px solid #6e6e6e;
-    cursor: pointer;
-}
-
-select:focus{
+select:focus {
     outline: none;
 }
 
-.select option{
-    color: gray;
-    background: transparent!important;
-    border-radius: 20px;
-    cursor: pointer;
-}
-.sort{
-    transition: .5s;
-    transform: rotateX(0deg);
-}
-button:hover .sort{
-    transform: rotateX(180deg);
-    transition: .5s;
-}
-
-.intext{
-    border: 2px solid #6e6e6e;
-    border-radius: 5px 0 0 5px;
-    height: 100%!important;
-}
-
-.intext:focus{
-    outline: none;
-}
-
-.table{
+/* Tablas */
+.table {
     height: 60vh;
     overflow-y: scroll;
     border: 2px solid #6e6e6e;
 }
 
-.table::-webkit-scrollbar{
+.table::-webkit-scrollbar {
     width: 7px;
     background: rgba(249, 249, 249, 0.466);
     border-radius: 50vw;
 }
 
-.table::-webkit-scrollbar-thumb{
+.table::-webkit-scrollbar-thumb {
     background-color: #6e6e6e;
     border: 1px solid rgb(174, 174, 174);
     border-radius: 50vw;
 }
 
-.row_table{
-    border-bottom: solid 1px rgb(174, 174, 174);
-}
-
-.cont-name{
-    width: 100%;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-}
-
-.info{
-    text-decoration: none;
-    
-    font-size: 1.1rem;
-    transform: scale(100%);
-    transition: .2s;
-}
-
-.info:hover{
-    transform: scale(110%);
-    transition: .2s;
-    
-}
-
-.rt{
-    text-decoration: none;
-    
-    transform: scale(100%);
-    transition: .2s;
-}
-
-.rt:hover{
-    transform: scale(110%);
-    transition: .2s;
-    
-}
-
-.fa-circle-down{
-    animation: down infinite 5s;
-}
-
+/* Animaciones */
 @keyframes down {
-    0%{
-        transform: translateY(0px);
-    }
-    8%{
-        transform: translateY(20px);
-    }
-    16%{
-        transform: translateY(0px);
 
+    0%,
+    16%,
+    32% {
+        transform: translateY(0);
     }
-    24%{
+
+    8%,
+    24% {
         transform: translateY(20px);
-    }
-    32%{
-        transform: translateY(0px);
     }
 }
-
 
 @keyframes changeBorderRadius {
-    0% {
-        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-      }
-      25% {
-        border-radius: 20% 80% 70% 30% / 80% 20% 30% 70%;
-      }
-      50% {
-        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-      }
-      75% {
-        border-radius: 70% 30% 20% 80% / 30% 70% 80% 20%;
-      }
-      100% {
-        border-radius: 50% 50% 50% 50% / 50% 50% 50% 50%;
-      }
-  }
 
-
-@keyframes intro {
-    from{
-        transform: translateY(1000px);
+    0%,
+    50%,
+    100% {
+        border-radius: 50%;
     }
-    to{
-        transform: translateY(0px);
+
+    25% {
+        border-radius: 20% 80% 70% 30%;
+    }
+
+    75% {
+        border-radius: 70% 30% 20% 80%;
     }
 }
 
-@keyframes intrologo {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
-}
-
+/* Responsive */
 @media (max-width: 600px) {
-    .cont-rt{
+    .cont-rt {
         height: 10vh;
     }
 }
 
-@keyframes introimg {
-    from{
-        transform: translateY(1000px);
+@media (max-width: 768px) {
+    .container-text h2 {
+        font-size: 1.4rem;
     }
-    to{
-        transform: translateY(0px);
+
+    .container-text h5 {
+        font-size: 0.9rem;
+    }
+
+    #btn,
+    .add_person {
+        font-size: 0.8rem;
+    }
+
+    #inputsContainer input.form-control {
+        font-size: 0.9rem;
     }
 }
 
-@keyframes introtext {
-    from{
-        opacity: 0;
-    }
-    to{
-        opacity: 1;
-    }
+#apuntate {
+    color: var(--space-cadet);
+    padding: 30px 0;
+    border-radius: 10px;
+}
+
+#registerForm {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#inputsContainer input.form-control {
+    border-radius: 5px;
+    font-size: 1rem;
+    background: var(--antiflash-white);
+    color: var(--space-cadet);
+}
+
+/* Botón de enviar en verde */
+#registerForm button[type="submit"] {
+    background-color: var(--green);
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+#registerForm button[type="submit"]:hover {
+    background-color: #005f2f;
+    /* Un verde más oscuro al pasar el cursor */
+}
+
+/* Estilo para "añadir acompañante" como texto plano */
+.add-accompanist {
+    background: none;
+    color: var(--space-cadet);
+    border: none;
+    font-size: 1rem;
+    text-decoration: underline;
+    /* Para que parezca un enlace */
+    cursor: pointer;
+}
+
+.add-accompanist:hover {
+    text-decoration: none;
+    /* Quitar subrayado al pasar el cursor */
+}
+
+/* Contenedor principal */
+#info {
+    padding: 2rem 0 4rem;
+    border-radius: 15px;
+}
+h1, h2, h3, h4, h5 {
+    font-weight: bold;
+}
+#info h2,
+#info h4 {
+    color: var(--federal-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+#info h2 i,
+#info h4 i {
+    color: var(--space-cadet);
+}
+
+/* Preguntas y respuestas */
+.questions-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.question-card {
+    color: var(--space-cadet);
+    background: #fff;
+    border: 6px solid var(--orange);
+    outline: 6px solid var(--green);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    padding: 2.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.question-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.question-card .h5 {
+    color: var(--space-cadet);
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.question-card .h6 {
+    color: var(--space-cadet);
+    padding-top: 1rem;
+}
+
+/* Input y botón */
+form {
+    margin-top: 2rem;
+    justify-content: center;
+}
+
+form input[type="text"] {
+    border-radius: 5px;
+    padding: 0.5rem;
+    flex-grow: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: border 0.2s;
+}
+
+form input[type="text"]:focus {
+    border-color: var(--dark-green);
+    outline: none;
+}
+
+form button {
+    color: var(--federal-blue);
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+/* Tarjetas de colaboradores */
+.collaborators {
+    margin-top: 30rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    padding: 2rem 0;
+    background-image: url("../imgs/fondo_corto.png") no-repeat center/cover;
+}
+
+.card_colab {
+    text-decoration: none;
+    border-radius: 10px;
+    padding: 1rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card_colab:hover {
+    transform: translateY(-5px);
+    border-color: var(--green);
+}
+
+.name_collab {
+    color: var(--federal-blue);
+    font-weight: bold;
+    font-size: 1rem;
+    margin-top: 1rem;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.logo_collab {
+    max-width: 100%;
+}
+
+
+.contact {
+    background-color: #fff;
+    border: 4px solid var(--yellow); /* Borde amarillo */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+
+}
+
+/* Título del formulario */
+form h4 {
+    font-size: 1.5rem;
+    color: var(--space-cadet); /* Color de texto consistente */
+    margin-bottom: 20px;
+}
+
+/* Estilo de los inputs */
+form .form-control {
+    border-radius: 5px;
+    font-size: 1rem;
+    padding: 10px;
+    background: var(--antiflash-white);
+    color: var(--space-cadet);
+    transition: outline 0.3s ease, border-color 0.3s ease;
+}
+
+/* Outline azul al seleccionar un campo */
+form .form-control:focus {
+    outline: 3px solid var(--blue); /* Outline azul */
+    border-color: var(--green); /* Cambiar el borde al verde */
+}
+
+/* Estilo del botón para cargar imagen */
+form .form-control-file + label {
+    background-color: var(--green);
+    color: #fff;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s ease;
+}
+
+form .form-control-file + label:hover {
+    background-color: #005f2f; /* Verde oscuro al pasar el cursor */
+}
+
+/* Estilo del texto "opcional" */
+form .form-group span {
+    color: var(--space-cadet);
+    font-size: 0.9rem;
+}
+
+/* Estilo del botón de enviar */
+form button[type="submit"] {
+    background-color: var(--green);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button[type="submit"]:hover {
+    background-color: #005f2f; /* Verde más oscuro */
 }
